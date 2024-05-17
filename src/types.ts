@@ -5,7 +5,7 @@ export const dogSchema = z.object({
   name: z.string(),
   image: z.string(),
   description: z.string(),
-  isFavorite: z.boolean(),
+  isFavorite: z.boolean()
 });
 
 export type Dog = z.infer<typeof dogSchema>;

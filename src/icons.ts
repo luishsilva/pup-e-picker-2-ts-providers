@@ -5,5 +5,5 @@ import Trash from "../public/assets/trash.png";
 export const Icons = {
   Heart,
   EmptyHeart,
-  Trash,
+  Trash
 };
