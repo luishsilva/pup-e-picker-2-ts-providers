@@ -3,7 +3,16 @@
 import { DogCard } from "./DogCard";
 import { Dog } from "../types";
 
-export const Dogs = ({allDogs} : {allDogs: Dog[]}) =>
+export const Dogs = (
+  { 
+    dogs, 
+    updateDog,
+  } 
+  : 
+  {
+    dogs: Dog[], 
+    updateDog: (id: number, isFavorite: boolean) => Promise<void>;
+  }) =>
   // no props allowed
   {
     return (
@@ -12,7 +21,7 @@ export const Dogs = ({allDogs} : {allDogs: Dog[]}) =>
       <>
         {/* Make all the dog cards show up here */}
         {
-          allDogs.length > 0 && allDogs.map(dog => (
+          dogs.length > 0 && dogs.map(dog => (
             <DogCard 
               dog={{
                 id: dog.id,
@@ -26,10 +35,10 @@ export const Dogs = ({allDogs} : {allDogs: Dog[]}) =>
                   //deleteDog(dog.id);
                 }}
                 onHeartClick={() => {
-                  //updateDog(dog.id, false);
+                  updateDog(dog.id,false);
                 }}
                 onEmptyHeartClick={() => {
-                  //updateDog(dog.id, true);
+                  updateDog(dog.id, true);
                 }}
                 isLoading={false}
             />
