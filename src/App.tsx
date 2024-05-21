@@ -28,6 +28,13 @@ export function App() {
         dog.id === id ? {...dog, isFavorite: isFavorite} : dog 
       )
     );
+    Requests.patchFavoriteForDog(id, isFavorite)
+    .then(refetchData);
+  }
+
+  const deleteDog = (id: number) => {
+    const filteredDogs = dogs.filter(dog => dog.id !== id)
+    setDogs(filteredDogs);
   }
 
   return (
@@ -36,7 +43,11 @@ export function App() {
         <h1>pup-e-picker (Functional)</h1>
       </header>
       <Section label={"Dogs: "}>
-        <Dogs dogs={dogs} updateDog={updateDog}/>
+        <Dogs 
+          deleteDog ={deleteDog}
+          dogs={dogs} 
+          updateDog={updateDog}
+        />
       </Section>
     </div>
   );

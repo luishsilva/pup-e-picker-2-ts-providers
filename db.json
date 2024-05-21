@@ -1,1 +1,144 @@
-{"dogs":[{"name":"Ramiro","image":"/assets/boxer.png","description":"Specialist cyan Rock Honda parsing Electric brand calculating","isFavorite":true,"id":0},{"name":"Jaren","image":"/assets/blue-heeler.png","description":"model yellow Lead Diesel Fields CSS Corporate","isFavorite":false,"id":1},{"name":"Lizeth","image":"/assets/corgi.png","description":"acidly Northeast Pants Account reboot","isFavorite":false,"id":2},{"name":"Maxime","image":"/assets/boxer.png","description":"Osinski application Einsteinium Kwanza deposit withdrawal ivory","isFavorite":true,"id":3},{"name":"Mina","image":"/assets/blue-heeler.png","description":"Classical Omnigender Meitnerium Implemented West","isFavorite":false,"id":4},{"name":"Hoyt","image":"/assets/dalmation.png","description":"Chief like Circle Incredible Neither Human Soft FTM","isFavorite":false,"id":5},{"name":"Rosendo","image":"/assets/chihuahua.avif","description":"newton ASCII compressing Infrastructure Movies alarm Southeast grotesque","isFavorite":false,"id":6},{"name":"Alden","image":"/assets/corgi.png","description":"necklace Demiflux DNS Account or Electric product","isFavorite":false,"id":7},{"name":"Enid","image":"/assets/cowardly.png","description":"up Androgyne Garden unto neural","isFavorite":true,"id":8},{"name":"Bella","image":"/assets/boxer.png","description":"Folk Cambridgeshire synthesize unless upon matrices Chair","isFavorite":true,"id":9},{"name":"Charity","image":"/assets/boxer.png","description":"Executive solid Functionality Bike Cotton Isle Computer microchip","isFavorite":false,"id":10},{"name":"Watson","image":"/assets/chihuahua.avif","description":"Electronic Data Shilling overriding Future bypassing compress","isFavorite":false,"id":11},{"name":"Chanelle","image":"/assets/boxer.png","description":"Hybrid scarcely virtual Hybrid Generic granular cornmeal Tunisian","isFavorite":false,"id":12},{"name":"Marquise","image":"/assets/boxer.png","description":"Southwest Liberian grey Latin port","isFavorite":true,"id":13},{"name":"Jordon","image":"/assets/corgi.png","description":"since Account ADP worrisome productize purple Jazz","isFavorite":false,"id":14},{"name":"Kamille","image":"/assets/blue-heeler.png","description":"auxiliary Alaska Research Response withdrawal Convertible PCI","isFavorite":true,"id":15},{"name":"Ansley","image":"/assets/blue-heeler.png","description":"Metrics Oregon briskly anti flexibility Bacon Checking","isFavorite":false,"id":16},{"name":"Russ","image":"/assets/cowardly.png","description":"parse Cheese generate gold reboot how Architect Security","isFavorite":true,"id":17},{"name":"Mariam","image":"/assets/dalmation.png","description":"far Bike primary Regional Peso before optimizing awkward","isFavorite":false,"id":18},{"name":"Americo","image":"/assets/cowardly.png","description":"expert alliance HEX farad quantifying","isFavorite":true,"id":19}]}
+{
+  "dogs": [
+    {
+      "name": "Ramiro",
+      "image": "/assets/boxer.png",
+      "description": "Specialist cyan Rock Honda parsing Electric brand calculating",
+      "isFavorite": true,
+      "id": 0
+    },
+    {
+      "name": "Jaren",
+      "image": "/assets/blue-heeler.png",
+      "description": "model yellow Lead Diesel Fields CSS Corporate",
+      "isFavorite": false,
+      "id": 1
+    },
+    {
+      "name": "Lizeth",
+      "image": "/assets/corgi.png",
+      "description": "acidly Northeast Pants Account reboot",
+      "isFavorite": false,
+      "id": 2
+    },
+    {
+      "name": "Maxime",
+      "image": "/assets/boxer.png",
+      "description": "Osinski application Einsteinium Kwanza deposit withdrawal ivory",
+      "isFavorite": true,
+      "id": 3
+    },
+    {
+      "name": "Mina",
+      "image": "/assets/blue-heeler.png",
+      "description": "Classical Omnigender Meitnerium Implemented West",
+      "isFavorite": false,
+      "id": 4
+    },
+    {
+      "name": "Hoyt",
+      "image": "/assets/dalmation.png",
+      "description": "Chief like Circle Incredible Neither Human Soft FTM",
+      "isFavorite": false,
+      "id": 5
+    },
+    {
+      "name": "Rosendo",
+      "image": "/assets/chihuahua.avif",
+      "description": "newton ASCII compressing Infrastructure Movies alarm Southeast grotesque",
+      "isFavorite": false,
+      "id": 6
+    },
+    {
+      "name": "Alden",
+      "image": "/assets/corgi.png",
+      "description": "necklace Demiflux DNS Account or Electric product",
+      "isFavorite": false,
+      "id": 7
+    },
+    {
+      "name": "Enid",
+      "image": "/assets/cowardly.png",
+      "description": "up Androgyne Garden unto neural",
+      "isFavorite": true,
+      "id": 8
+    },
+    {
+      "name": "Bella",
+      "image": "/assets/boxer.png",
+      "description": "Folk Cambridgeshire synthesize unless upon matrices Chair",
+      "isFavorite": true,
+      "id": 9
+    },
+    {
+      "name": "Charity",
+      "image": "/assets/boxer.png",
+      "description": "Executive solid Functionality Bike Cotton Isle Computer microchip",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Watson",
+      "image": "/assets/chihuahua.avif",
+      "description": "Electronic Data Shilling overriding Future bypassing compress",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Chanelle",
+      "image": "/assets/boxer.png",
+      "description": "Hybrid scarcely virtual Hybrid Generic granular cornmeal Tunisian",
+      "isFavorite": false,
+      "id": 12
+    },
+    {
+      "name": "Marquise",
+      "image": "/assets/boxer.png",
+      "description": "Southwest Liberian grey Latin port",
+      "isFavorite": true,
+      "id": 13
+    },
+    {
+      "name": "Jordon",
+      "image": "/assets/corgi.png",
+      "description": "since Account ADP worrisome productize purple Jazz",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Kamille",
+      "image": "/assets/blue-heeler.png",
+      "description": "auxiliary Alaska Research Response withdrawal Convertible PCI",
+      "isFavorite": true,
+      "id": 15
+    },
+    {
+      "name": "Ansley",
+      "image": "/assets/blue-heeler.png",
+      "description": "Metrics Oregon briskly anti flexibility Bacon Checking",
+      "isFavorite": false,
+      "id": 16
+    },
+    {
+      "name": "Russ",
+      "image": "/assets/cowardly.png",
+      "description": "parse Cheese generate gold reboot how Architect Security",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "Mariam",
+      "image": "/assets/dalmation.png",
+      "description": "far Bike primary Regional Peso before optimizing awkward",
+      "isFavorite": false,
+      "id": 18
+    },
+    {
+      "name": "Americo",
+      "image": "/assets/cowardly.png",
+      "description": "expert alliance HEX farad quantifying",
+      "isFavorite": true,
+      "id": 19
+    }
+  ]
+}

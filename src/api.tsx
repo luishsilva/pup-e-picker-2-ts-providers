@@ -46,8 +46,17 @@ const deleteDogRequest = (id: number): Promise<void> => {
   });
 };
 
-const patchFavoriteForDog = () => {
-  // fill out method
+const patchFavoriteForDog = (id: number, isFavorite: boolean): Promise<Dog[]> => {
+   return fetch(`${baseUrl}/${endPoint}/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify({
+      isFavorite: isFavorite
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+  .then(response => response.json());
 };
 
 export const Requests = {

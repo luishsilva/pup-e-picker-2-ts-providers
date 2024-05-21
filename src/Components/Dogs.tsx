@@ -5,11 +5,13 @@ import { Dog } from "../types";
 
 export const Dogs = (
   { 
+    deleteDog,
     dogs, 
     updateDog,
   } 
   : 
   {
+    deleteDog: (id: number) => Promise<void>,
     dogs: Dog[], 
     updateDog: (id: number, isFavorite: boolean) => Promise<void>;
   }) =>
@@ -32,7 +34,7 @@ export const Dogs = (
               }}
               key={dog.id}
                 onTrashIconClick={() => {
-                  //deleteDog(dog.id);
+                  deleteDog(dog.id);
                 }}
                 onHeartClick={() => {
                   updateDog(dog.id,false);
