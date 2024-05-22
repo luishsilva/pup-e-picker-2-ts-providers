@@ -20,20 +20,28 @@ export const CreateDogForm = () =>
         <label htmlFor="description">Dog Description</label>
         <textarea name="" id="" cols={80} rows={10}></textarea>
         <label htmlFor="picture">Select an Image</label>
-        <select
-          id=""
-          onChange={(e) => {
-            setSelectedImage(e.target.value);
-          }}
-        >
-          {Object.entries(dogPictures).map(([label, pictureValue]) => {
-            return (
-              <option value={pictureValue} key={pictureValue}>
-                {label}
-              </option>
-            );
-          })}
-        </select>
+				<div className="d-flex align-items">
+					<select
+						id=""
+						onChange={(e) => {
+							setSelectedImage(e.target.value);
+						}}
+					>
+						{Object.entries(dogPictures).map(([label, pictureValue]) => {
+							return (
+								<option value={pictureValue} key={pictureValue}>
+									{label}
+								</option>
+							);
+						})}
+					</select>
+					<img
+						alt={`Image of ${selectedImage}`}
+						className=""
+						id="form-image-display"
+						src={selectedImage}
+					/>
+				</div>
         <input type="submit" value="submit" />
       </form>
     );
