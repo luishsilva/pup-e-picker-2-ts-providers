@@ -8,39 +8,11 @@
       "id": 0
     },
     {
-      "name": "Jaren",
-      "image": "/assets/blue-heeler.png",
-      "description": "model yellow Lead Diesel Fields CSS Corporate",
-      "isFavorite": false,
-      "id": 1
-    },
-    {
-      "name": "Lizeth",
-      "image": "/assets/corgi.png",
-      "description": "acidly Northeast Pants Account reboot",
-      "isFavorite": false,
-      "id": 2
-    },
-    {
       "name": "Maxime",
       "image": "/assets/boxer.png",
       "description": "Osinski application Einsteinium Kwanza deposit withdrawal ivory",
       "isFavorite": true,
       "id": 3
-    },
-    {
-      "name": "Mina",
-      "image": "/assets/blue-heeler.png",
-      "description": "Classical Omnigender Meitnerium Implemented West",
-      "isFavorite": false,
-      "id": 4
-    },
-    {
-      "name": "Hoyt",
-      "image": "/assets/dalmation.png",
-      "description": "Chief like Circle Incredible Neither Human Soft FTM",
-      "isFavorite": false,
-      "id": 5
     },
     {
       "name": "Rosendo",
@@ -88,7 +60,7 @@
       "name": "Chanelle",
       "image": "/assets/boxer.png",
       "description": "Hybrid scarcely virtual Hybrid Generic granular cornmeal Tunisian",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 12
     },
     {
@@ -102,7 +74,7 @@
       "name": "Jordon",
       "image": "/assets/corgi.png",
       "description": "since Account ADP worrisome productize purple Jazz",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 14
     },
     {
