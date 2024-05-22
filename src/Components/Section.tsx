@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useDogs } from "./providers/DogsProvider";
 
 export const Section = ({
   label,
@@ -8,37 +9,52 @@ export const Section = ({
   label: string;
   children: ReactNode;
 }) => {
+
+  const { activeTab, dogs, setActiveTab } = useDogs();
+
+  const totalFavorite = dogs.filter((dog) => dog.isFavorite === true).length;
+  const totalNotFavorite = dogs.filter((dog) => dog.isFavorite === false).length;
+  
   return (
     <section id="main-section">
       <div className="container-header">
         <div className="container-label">{label}</div>
         <div className="selectors">
-          {/* This should display the favorited count */}
+          {/* This should display the all favorite and unfavorite dogs */}
           <div
-            className={`selector ${"active"}`}
+            className={`selector ${activeTab === 'all-dogs' && 'active'}`}
             onClick={() => {
-              alert("click favorited");
+              setActiveTab("all-dogs");
             }}
           >
-            favorited ( {0} )
+            All dogs ( {dogs.length} )
+          </div>
+          {/* This should display the favorited count */}
+          <div
+            className={`selector ${activeTab === 'favorited' && 'active'}`}
+            onClick={() => {
+              setActiveTab("favorited");
+            }}
+          >
+            Favorited ( {totalFavorite} )
           </div>
 
           {/* This should display the unfavorited count */}
           <div
-            className={`selector ${""}`}
+            className={`selector ${activeTab === 'unfavorited' && 'active'}`}
             onClick={() => {
-              alert("click unfavorited");
+              setActiveTab("unfavorited");
             }}
           >
-            unfavorited ( {10} )
+            Unfavorited ( {totalNotFavorite} )
           </div>
           <div
-            className={`selector ${""}`}
+            className={`selector ${activeTab === 'create-dog' && 'active'}`}
             onClick={() => {
-              alert("clicked create dog");
+              setActiveTab("create-dog");
             }}
           >
-            create dog
+            Create dog
           </div>
         </div>
       </div>
