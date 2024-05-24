@@ -5,7 +5,7 @@ export const baseUrl = 'http://localhost:3000';
 export const endPoint = 'dogs';
 
 /**
-   * Retrieves all dogss from the server.
+   * Retrieves all dogs from the server.
    * @returns {Promise<Dogs[]>} A promise that resolves to an array of dogs.
    */
 const getAllDogs = (): Promise<Dog[]> => {
@@ -25,9 +25,16 @@ const getAllDogs = (): Promise<Dog[]> => {
   })
 };
 
-const postDog = () => {
-  // fill out method
+const postDog = (dog: Omit<Dog, 'id'>): Promise<void> => {
+  return fetch(`${baseUrl}/${endPoint}`, {
+    body: JSON.stringify(dog),
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then((response) => response.json());
 };
+
 const deleteDogRequest = (id: number): Promise<void> => {
   return new Promise((resolve, reject) => {
     fetch(`${baseUrl}/${endPoint}/${id}`, {

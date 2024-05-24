@@ -32,14 +32,14 @@
       "name": "Enid",
       "image": "/assets/cowardly.png",
       "description": "up Androgyne Garden unto neural",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 8
     },
     {
       "name": "Bella",
       "image": "/assets/boxer.png",
       "description": "Folk Cambridgeshire synthesize unless upon matrices Chair",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 9
     },
     {
@@ -60,28 +60,28 @@
       "name": "Chanelle",
       "image": "/assets/boxer.png",
       "description": "Hybrid scarcely virtual Hybrid Generic granular cornmeal Tunisian",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 12
     },
     {
       "name": "Marquise",
       "image": "/assets/boxer.png",
       "description": "Southwest Liberian grey Latin port",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 13
     },
     {
       "name": "Jordon",
       "image": "/assets/corgi.png",
       "description": "since Account ADP worrisome productize purple Jazz",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 14
     },
     {
       "name": "Kamille",
       "image": "/assets/blue-heeler.png",
       "description": "auxiliary Alaska Research Response withdrawal Convertible PCI",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 15
     },
     {
@@ -95,7 +95,7 @@
       "name": "Russ",
       "image": "/assets/cowardly.png",
       "description": "parse Cheese generate gold reboot how Architect Security",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 17
     },
     {
@@ -111,6 +111,20 @@
       "description": "expert alliance HEX farad quantifying",
       "isFavorite": true,
       "id": 19
+    },
+    {
+      "name": "Dog 1",
+      "image": "/assets/dalmation.png",
+      "description": "Description dog 1",
+      "isFavorite": false,
+      "id": 20
+    },
+    {
+      "name": "Dog 2",
+      "image": "/assets/cowardly.png",
+      "description": "Description dog 2",
+      "isFavorite": false,
+      "id": 21
     }
   ]
 }

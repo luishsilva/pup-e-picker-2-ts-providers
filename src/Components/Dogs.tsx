@@ -33,6 +33,11 @@ export const Dogs = () => {
               onTrashIconClick={() => {
                 setIsLoading(true);
                 deleteDog(dog.id)
+                .then(() => {
+                  toast.success('Dog deleted successfully.', {
+                    duration: 2000,
+                  });
+                }) 
                 .catch(() => {
                   toast.error('Failed to delete the Dog, Please try again.', {
                     duration: 2000,

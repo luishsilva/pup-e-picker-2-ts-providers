@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { dogPictures } from "../dog-pictures";
+import { useDogs } from "./providers/DogsProvider";
+import { toast } from 'react-hot-toast';
 
 export const CreateDogForm = () =>
-  // no props allowed
   {
     const [selectedImage, setSelectedImage] = useState(dogPictures.BlueHeeler);
+		const [name, setName] = useState('');
+  	const [description, setDescription] = useState('');
+		const { postDog, isLoading } = useDogs();
 
     return (
       <form
@@ -12,20 +16,54 @@ export const CreateDogForm = () =>
         id="create-dog-form"
         onSubmit={(e) => {
           e.preventDefault();
+					postDog({
+						name: name,
+						image: selectedImage,
+						description: description,  
+						isFavorite: false,
+					})
+					.then(() => {
+						toast.success('Dog create successfully.');
+					})
+					.then(() => {
+						setName('');
+						setDescription('');
+						setSelectedImage(dogPictures.BlueHeeler);
+					})
+					.catch(() => {
+						toast.error('Failed to add a new Dog, Please try again.', {
+							duration: 2000,
+						});
+					});
         }}
       >
         <h4>Create a New Dog</h4>
         <label htmlFor="name">Dog Name</label>
-        <input type="text" />
+        <input 
+					className="form-input"
+					type="text" 
+					onChange={event => setName(event.target.value)}
+					value={name}
+				/>
         <label htmlFor="description">Dog Description</label>
-        <textarea name="" id="" cols={80} rows={10}></textarea>
+        <textarea
+					className="form-input"
+					name="" 
+					id="" 
+					cols={40} 
+					rows={10}
+					onChange={event => setDescription(event.target.value)}
+					value={description}
+				/>
         <label htmlFor="picture">Select an Image</label>
 				<div className="d-flex align-items">
 					<select
+						className="form-input"
 						id=""
 						onChange={(e) => {
 							setSelectedImage(e.target.value);
 						}}
+						value={selectedImage}
 					>
 						{Object.entries(dogPictures).map(([label, pictureValue]) => {
 							return (
@@ -42,7 +80,11 @@ export const CreateDogForm = () =>
 						src={selectedImage}
 					/>
 				</div>
-        <input type="submit" value="submit" />
+        <input 
+					disabled={isLoading}
+					type="submit" 
+					value="submit" 
+				/>
       </form>
     );
   };
