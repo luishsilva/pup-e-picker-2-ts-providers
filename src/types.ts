@@ -10,4 +10,4 @@ export const dogSchema = z.object({
 
 export type Dog = z.infer<typeof dogSchema>;
 
-export type ActiveTab = 'all-dogs' | 'favorited' | 'unfavorited' | 'create-dog';
+export type ActiveTab = "all-dogs" | "favorited" | "unfavorited" | "create-dog";

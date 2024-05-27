@@ -3,7 +3,7 @@ import { Icons } from "../icons";
 // ! Do Not Change This Component
 export const FavoriteButton = ({
   disabled,
-  onClick,
+  onClick
 }: {
   disabled: boolean;
   onClick: () => void;
@@ -15,7 +15,7 @@ export const FavoriteButton = ({
     style={{
       width: 40,
       border: 0,
-      cursor: disabled ? "no-drop" : "pointer",
+      cursor: disabled ? "no-drop" : "pointer"
     }}
     onClick={() => {
       if (!disabled) {

@@ -12,7 +12,7 @@ const images = [
   "/assets/boxer.png",
   "/assets/corgi.png",
   "/assets/cowardly.png",
-  "/assets/dalmation.png",
+  "/assets/dalmation.png"
 ];
 const db = {
   dogs: range(dogAmount).map((_, id) => ({
@@ -20,8 +20,8 @@ const db = {
     image: sample(images),
     description: faker.random.words(sample([8, 5, 7])),
     isFavorite: sample([true, false]),
-    id,
-  })),
+    id
+  }))
 };
 
 writeFileSync("db.json", JSON.stringify(db), { encoding: "utf-8" });

@@ -4,7 +4,7 @@ import { Icons } from "../icons";
 
 export const UnfavoriteButton = ({
   onClick,
-  disabled,
+  disabled
 }: {
   disabled: boolean;
   onClick: () => void;
@@ -16,7 +16,7 @@ export const UnfavoriteButton = ({
     style={{
       width: 40,
       border: 0,
-      cursor: disabled ? "no-drop" : "pointer",
+      cursor: disabled ? "no-drop" : "pointer"
     }}
     onClick={() => {
       if (!disabled) {

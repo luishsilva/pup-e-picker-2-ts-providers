@@ -4,7 +4,7 @@
       "name": "Ramiro",
       "image": "/assets/boxer.png",
       "description": "Specialist cyan Rock Honda parsing Electric brand calculating",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 0
     },
     {
@@ -125,6 +125,69 @@
       "description": "Description dog 2",
       "isFavorite": false,
       "id": 21
+    },
+    {
+      "name": "Dog 1",
+      "image": "/assets/boxer.jpeg",
+      "description": "Dog Description",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "asdasd",
+      "image": "/assets/blue-heeler.png",
+      "description": "asdasdasd",
+      "isFavorite": false,
+      "id": 23
+    },
+    {
+      "name": "asdad",
+      "image": "/assets/boxer.jpeg",
+      "description": "asdasd",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "asdasd",
+      "image": "/assets/blue-heeler.png",
+      "description": "asdad",
+      "isFavorite": false,
+      "id": 25
+    },
+    {
+      "name": "Dog monday",
+      "image": "/assets/dalmation.png",
+      "description": "Description of the dog created on Monday morning",
+      "isFavorite": false,
+      "id": 26
+    },
+    {
+      "name": "Dog monday",
+      "image": "/assets/dalmation.png",
+      "description": "Description of the dog created on Monday morning",
+      "isFavorite": false,
+      "id": 27
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 28
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 29
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 30
     }
   ]
 }
