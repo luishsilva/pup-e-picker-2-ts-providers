@@ -7,7 +7,7 @@ export const CreateDogForm = () => {
   const [selectedImage, setSelectedImage] = useState(dogPictures.BlueHeeler);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const { postDog, isLoading } = useDogs();
+  const { postDog, isLoading, setIsLoading } = useDogs();
 
   return (
     <form
@@ -15,6 +15,7 @@ export const CreateDogForm = () => {
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
+        setIsLoading(true);
         postDog({
           name: name,
           image: selectedImage,
@@ -33,7 +34,8 @@ export const CreateDogForm = () => {
             toast.error("Failed to add a new Dog, Please try again.", {
               duration: 2000
             });
-          });
+          })
+          .finally(() => setIsLoading(false));
       }}
     >
       <h4>Create a New Dog</h4>
@@ -82,7 +84,7 @@ export const CreateDogForm = () => {
           src={selectedImage}
         />
       </div>
-      <input disabled={isLoading} type="submit" value="submit" />
+      <input className="form-input" disabled={isLoading} type="submit" value="Submit" />
     </form>
   );
 };

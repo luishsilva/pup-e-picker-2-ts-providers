@@ -4,7 +4,7 @@
       "name": "Ramiro",
       "image": "/assets/boxer.png",
       "description": "Specialist cyan Rock Honda parsing Electric brand calculating",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 0
     },
     {
@@ -18,7 +18,7 @@
       "name": "Rosendo",
       "image": "/assets/chihuahua.avif",
       "description": "newton ASCII compressing Infrastructure Movies alarm Southeast grotesque",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 6
     },
     {
@@ -188,6 +188,104 @@
       "description": "",
       "isFavorite": false,
       "id": 30
+    },
+    {
+      "name": "dog ",
+      "image": "/assets/blue-heeler.png",
+      "description": "luis",
+      "isFavorite": false,
+      "id": 31
+    },
+    {
+      "name": "luis",
+      "image": "/assets/blue-heeler.png",
+      "description": "asdsadfdf",
+      "isFavorite": false,
+      "id": 32
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 33
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 34
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 35
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 36
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 37
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 38
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 39
+    },
+    {
+      "name": "",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "id": 40
+    },
+    {
+      "name": "dog",
+      "image": "/assets/blue-heeler.png",
+      "description": "de",
+      "isFavorite": false,
+      "id": 41
+    },
+    {
+      "name": "asdsa",
+      "image": "/assets/blue-heeler.png",
+      "description": "asdad",
+      "isFavorite": false,
+      "id": 42
+    },
+    {
+      "name": "dasddasd",
+      "image": "/assets/blue-heeler.png",
+      "description": "asdasdasd",
+      "isFavorite": false,
+      "id": 43
+    },
+    {
+      "name": "dog 1",
+      "image": "/assets/cowardly.png",
+      "description": "dog description",
+      "isFavorite": false,
+      "id": 44
     }
   ]
 }

@@ -37,6 +37,7 @@ export const DogsProvider = ({ children }: { children: ReactNode }) => {
     return Requests.getAllDogs()
       .then(setDogs)
       .catch((error) => {
+        setDogs([]);
         toast.error("Error fetching dogs:", error);
       });
   };
