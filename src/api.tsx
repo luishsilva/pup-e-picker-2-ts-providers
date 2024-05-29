@@ -5,17 +5,15 @@ export const endPoint = "dogs";
 
 /**
  * Retrieves all dogs from the server.
- * @returns {Promise<Dogs[]>} A promise that resolves to an array of dogs.
  */
-const getAllDogs = (): Promise<Dog[]> => {
+const getAllDogs = () => {
   return fetch(`${baseUrl}/${endPoint}`, {
     method: "GET"
   })
-    .then((response) => response.json())
-    .then((data) => data as Dog[]);
+    .then((response) => response.json());
 };
 
-const postDog = (dog: Omit<Dog, "id">): Promise<void> => {
+const postDog = (dog: Omit<Dog, "id">) => {
   return fetch(`${baseUrl}/${endPoint}`, {
     body: JSON.stringify(dog),
     method: "POST",
@@ -25,25 +23,13 @@ const postDog = (dog: Omit<Dog, "id">): Promise<void> => {
   }).then((response) => response.json());
 };
 
-const deleteDogRequest = (id: number): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    fetch(`${baseUrl}/${endPoint}/${id}`, {
-      method: "DELETE"
-    })
-      .then((response) => {
-        if (!response.ok) {
-          reject(new Error("Failed to delete dog"));
-        } else {
-          resolve();
-        }
-      })
-      .catch((error) => {
-        reject(error);
-      });
+const deleteDogRequest = (id: number) => {
+  return fetch(`${baseUrl}/${endPoint}/${id}`, {
+    method: "DELETE"
   });
 };
 
-const patchFavoriteForDog = (id: number, isFavorite: boolean): Promise<Dog[]> => {
+const patchFavoriteForDog = (id: number, isFavorite: boolean) => {
   return fetch(`${baseUrl}/${endPoint}/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
@@ -52,7 +38,7 @@ const patchFavoriteForDog = (id: number, isFavorite: boolean): Promise<Dog[]> =>
     headers: {
       "Content-Type": "application/json"
     }
-  }).then((response) => response.json());
+  });
 };
 
 export const Requests = {

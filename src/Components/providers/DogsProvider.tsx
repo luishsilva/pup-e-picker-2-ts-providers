@@ -37,23 +37,37 @@ export const DogsProvider = ({ children }: { children: ReactNode }) => {
     return Requests.getAllDogs()
       .then(setDogs)
       .catch((error) => {
-        setDogs([]);
         toast.error("Error fetching dogs:", error);
       });
   };
 
   const updateDog = (id: number, isFavorite: boolean) => {
+    setIsLoading(true);
     setDogs(dogs.map((dog) => (dog.id === id ? { ...dog, isFavorite: isFavorite } : dog)));
-    Requests.patchFavoriteForDog(id, isFavorite).then(refetchData);
+    Requests.patchFavoriteForDog(id, isFavorite)
+      .then((response) => {
+        if (!response.ok) {
+          setDogs(dogs);
+          toast.error("Something went wrong. Please try again later.");
+        } else return;
+      })
+      .finally(() => setIsLoading(false));
   };
 
-  const deleteDog = (id: number): Promise<void> => {
+  const deleteDog = (id: number) => {
     const filteredDogs = dogs.filter((dog) => dog.id !== id);
     setDogs(filteredDogs);
-    return Requests.deleteDogRequest(id).then(refetchData);
+    return Requests.deleteDogRequest(id)
+      .then((response) => {
+        if (!response.ok) {
+          setDogs(dogs);
+          toast.error("Something went wrong. Please try again later.");
+        } else return;
+      })
+      .finally(() => setIsLoading(false));
   };
 
-  const postDog = (dog: Omit<Dog, "id">): Promise<void> => {
+  const postDog = (dog: Omit<Dog, "id">) => {
     return Requests.postDog(dog).then(refetchData);
   };
 
