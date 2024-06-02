@@ -18,8 +18,9 @@ type DogsProviderType = {
   activeTab: ActiveTab;
   setActiveTab: Dispatch<SetStateAction<ActiveTab>>;
   isLoading: boolean;
-  setIsLoading: Dispatch<SetStateAction<boolean>>;
   postDog: (dog: Omit<Dog, "id">) => Promise<void>;
+  favoritedDogs: Dog[];
+  unFavoritedDogs: Dog[];
 };
 
 const DogsContext = createContext<DogsProviderType>({} as DogsProviderType);
@@ -43,31 +44,47 @@ export const DogsProvider = ({ children }: { children: ReactNode }) => {
 
   const updateDog = (id: number, isFavorite: boolean) => {
     setDogs(dogs.map((dog) => (dog.id === id ? { ...dog, isFavorite: isFavorite } : dog)));
-    Requests.patchFavoriteForDog(id, isFavorite)
-      .then((response) => {
-        if (!response.ok) {
-          setDogs(dogs);
-          toast.error("Something went wrong. Please try again later.");
-        } else return;
+    return Requests.patchFavoriteForDog(id, isFavorite)
+      .then(() => {
+        toast.success("The dog was updated successfully.");
+        return;
+      })
+      .catch(() => {
+        toast.error("Something went wrong. Please try again later.");
+        return setDogs(dogs);
       });
   };
 
   const deleteDog = (id: number) => {
-    const filteredDogs = dogs.filter((dog) => dog.id !== id);
-    setDogs(filteredDogs);
+    setDogs(dogs.filter((dog) => dog.id !== id));
     return Requests.deleteDogRequest(id)
-      .then((response) => {
-        if (!response.ok) {
-          setDogs(dogs);
-          toast.error("Something went wrong. Please try again later.");
-        } else return;
+      .then(() => {
+        toast.success("The dog was deleted successfully.");
+        return;
+      })
+      .catch(() => {
+        toast.error("Something went wrong. Please try again later.");
+        return setDogs(dogs);
+      });
+  };
+
+  const postDog = (dog: Omit<Dog, "id">) => {
+    setIsLoading(true);
+    return Requests.postDog(dog)
+      .then(refetchData)
+      .then(() => {
+        toast.success("The dog was added successfully.");
+        return;
+      })
+      .catch(() => {
+        toast.success("Failed to add a new Dog, Please try again.");
+        return;
       })
       .finally(() => setIsLoading(false));
   };
 
-  const postDog = (dog: Omit<Dog, "id">) => {
-    return Requests.postDog(dog).then(refetchData);
-  };
+  const favoritedDogs = dogs.filter((dog) => dog.isFavorite);
+  const unFavoritedDogs = dogs.filter((dog) => !dog.isFavorite);
 
   return (
     <DogsContext.Provider
@@ -78,8 +95,9 @@ export const DogsProvider = ({ children }: { children: ReactNode }) => {
         activeTab,
         setActiveTab,
         isLoading,
-        setIsLoading,
-        postDog
+        postDog,
+        favoritedDogs,
+        unFavoritedDogs,
       }}
     >
       {children}

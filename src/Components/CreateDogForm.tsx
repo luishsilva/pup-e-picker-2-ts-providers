@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { useDogs } from "../providers/DogsProvider";
-import { toast } from "react-hot-toast";
 
 export const CreateDogForm = () => {
   const [selectedImage, setSelectedImage] = useState(dogPictures.BlueHeeler);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const { postDog, isLoading, setIsLoading } = useDogs();
+  const { postDog, isLoading } = useDogs();
+
+  const resetForm = () => {
+    setName("");
+    setDescription("");
+    setSelectedImage(dogPictures.BlueHeeler);
+  }
 
   return (
     <form
@@ -15,27 +20,13 @@ export const CreateDogForm = () => {
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
-        setIsLoading(true);
         postDog({
           name: name,
           image: selectedImage,
           description: description,
           isFavorite: false
-        })
-          .then(() => {
-            toast.success("Dog create successfully.");
-          })
-          .then(() => {
-            setName("");
-            setDescription("");
-            setSelectedImage(dogPictures.BlueHeeler);
-          })
-          .catch(() => {
-            toast.error("Failed to add a new Dog, Please try again.", {
-              duration: 2000
-            });
-          })
-          .finally(() => setIsLoading(false));
+        });
+        resetForm();
       }}
     >
       <h4>Create a New Dog</h4>

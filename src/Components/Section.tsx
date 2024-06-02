@@ -9,10 +9,7 @@ export const Section = ({
   label: string;
   children: ReactNode;
 }) => {
-  const { activeTab, dogs, setActiveTab } = useDogs();
-
-  const totalFavorite = dogs.filter((dog) => dog.isFavorite === true).length;
-  const totalNotFavorite = dogs.filter((dog) => dog.isFavorite === false).length;
+  const { activeTab, dogs, setActiveTab, favoritedDogs, unFavoritedDogs } = useDogs();
 
   return (
     <section id="main-section">
@@ -35,7 +32,7 @@ export const Section = ({
               setActiveTab("favorited");
             }}
           >
-            Favorited ( {totalFavorite} )
+            Favorited ( {favoritedDogs.length} )
           </div>
 
           {/* This should display the unfavorited count */}
@@ -45,7 +42,7 @@ export const Section = ({
               setActiveTab("unfavorited");
             }}
           >
-            Unfavorited ( {totalNotFavorite} )
+            Unfavorited ( {unFavoritedDogs.length} )
           </div>
           <div
             className={`selector ${activeTab === "create-dog" && "active"}`}

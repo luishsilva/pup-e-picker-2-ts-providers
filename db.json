@@ -8,46 +8,11 @@
       "id": 0
     },
     {
-      "name": "Ansley",
-      "image": "/assets/blue-heeler.png",
-      "description": "Metrics Oregon briskly anti flexibility Bacon Checking",
-      "isFavorite": false,
-      "id": 16
-    },
-    {
-      "name": "Russ",
-      "image": "/assets/cowardly.png",
-      "description": "parse Cheese generate gold reboot how Architect Security",
-      "isFavorite": false,
-      "id": 17
-    },
-    {
-      "name": "Mariam",
-      "image": "/assets/dalmation.png",
-      "description": "far Bike primary Regional Peso before optimizing awkward",
-      "isFavorite": false,
-      "id": 18
-    },
-    {
       "name": "Americo",
       "image": "/assets/cowardly.png",
       "description": "expert alliance HEX farad quantifying",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 19
-    },
-    {
-      "name": "Dog 1",
-      "image": "/assets/dalmation.png",
-      "description": "Description dog 1",
-      "isFavorite": false,
-      "id": 20
-    },
-    {
-      "name": "Dog 2",
-      "image": "/assets/cowardly.png",
-      "description": "Description dog 2",
-      "isFavorite": false,
-      "id": 21
     },
     {
       "name": "Dog 1",
@@ -90,27 +55,6 @@
       "description": "Description of the dog created on Monday morning",
       "isFavorite": false,
       "id": 27
-    },
-    {
-      "name": "dasddasd",
-      "image": "/assets/blue-heeler.png",
-      "description": "asdasdasd",
-      "isFavorite": false,
-      "id": 43
-    },
-    {
-      "name": "dog 1",
-      "image": "/assets/cowardly.png",
-      "description": "dog description",
-      "isFavorite": false,
-      "id": 44
-    },
-    {
-      "name": "Dog 20",
-      "image": "/assets/cowardly.png",
-      "description": "description dog 20",
-      "isFavorite": false,
-      "id": 45
     }
   ]
 }

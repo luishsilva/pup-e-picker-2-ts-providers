@@ -5,12 +5,12 @@ import { useDogs } from "../providers/DogsProvider";
 import { toast } from "react-hot-toast";
 
 export const Dogs = () => {
-  const { activeTab, deleteDog, dogs, updateDog, isLoading } = useDogs();
+  const { activeTab, deleteDog, dogs, updateDog, isLoading, favoritedDogs, unFavoritedDogs } = useDogs();
 
   const filteredDogs =
     activeTab === "all-dogs"
       ? dogs
-      : dogs.filter((dog) => (activeTab == "favorited" ? dog.isFavorite : !dog.isFavorite));
+      : activeTab == "favorited" ? favoritedDogs : unFavoritedDogs;
 
   return (
     //  the "<> </>"" are called react fragments, it's like adding all the html inside
@@ -28,17 +28,7 @@ export const Dogs = () => {
             }}
             key={dog.id}
             onTrashIconClick={() => {
-              deleteDog(dog.id)
-                .then(() => {
-                  toast.success("Dog deleted successfully.", {
-                    duration: 2000
-                  });
-                })
-                .catch(() => {
-                  toast.error("Failed to delete the Dog, Please try again.", {
-                    duration: 2000
-                  });
-                });
+              deleteDog(dog.id);
             }}
             onHeartClick={() => {
               updateDog(dog.id, false);

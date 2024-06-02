@@ -9,8 +9,12 @@ export const endPoint = "dogs";
 const getAllDogs = () => {
   return fetch(`${baseUrl}/${endPoint}`, {
     method: "GET"
-  })
-    .then((response) => response.json());
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP failed with status ${response.status}`);
+    }
+    return response.json();
+  });
 };
 
 const postDog = (dog: Omit<Dog, "id">) => {
@@ -20,12 +24,22 @@ const postDog = (dog: Omit<Dog, "id">) => {
     headers: {
       "Content-Type": "application/json"
     }
-  }).then((response) => response.json());
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP failed with status ${response.status}`);
+    }
+    return response.json();
+  });
 };
 
 const deleteDogRequest = (id: number) => {
   return fetch(`${baseUrl}/${endPoint}/${id}`, {
     method: "DELETE"
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP failed with status ${response.status}`);
+    }
+    return response.json();
   });
 };
 
@@ -38,6 +52,11 @@ const patchFavoriteForDog = (id: number, isFavorite: boolean) => {
     headers: {
       "Content-Type": "application/json"
     }
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP failed with status ${response.status}`);
+    }
+    return response.json();
   });
 };
 

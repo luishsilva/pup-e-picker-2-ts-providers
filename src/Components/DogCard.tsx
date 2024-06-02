@@ -9,7 +9,7 @@ export const DogCard = ({
   onTrashIconClick,
   onEmptyHeartClick,
   onHeartClick,
-  isLoading 
+  isLoading
 }: {
   dog: Dog;
   onTrashIconClick: () => void;
