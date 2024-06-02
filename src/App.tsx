@@ -1,6 +1,6 @@
 import { Section } from "./Components/Section";
 import { Dogs } from "./Components/Dogs";
-import { useDogs } from "./Components/providers/DogsProvider";
+import { useDogs } from "./providers/DogsProvider";
 import { CreateDogForm } from "./Components/CreateDogForm";
 
 export function App() {

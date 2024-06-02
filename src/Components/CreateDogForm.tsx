@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { dogPictures } from "../dog-pictures";
-import { useDogs } from "./providers/DogsProvider";
+import { useDogs } from "../providers/DogsProvider";
 import { toast } from "react-hot-toast";
 
 export const CreateDogForm = () => {

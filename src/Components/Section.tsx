@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useDogs } from "./providers/DogsProvider";
+import { useDogs } from "../providers/DogsProvider";
 
 export const Section = ({
   label,

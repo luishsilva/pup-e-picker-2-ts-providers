@@ -7,8 +7,8 @@ import {
   Dispatch,
   SetStateAction
 } from "react";
-import { Dog, ActiveTab } from "../../types";
-import { Requests } from "../../api";
+import { Dog, ActiveTab } from "../types";
+import { Requests } from "../api";
 import { toast } from "react-hot-toast";
 
 type DogsProviderType = {
@@ -42,7 +42,6 @@ export const DogsProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const updateDog = (id: number, isFavorite: boolean) => {
-    setIsLoading(true);
     setDogs(dogs.map((dog) => (dog.id === id ? { ...dog, isFavorite: isFavorite } : dog)));
     Requests.patchFavoriteForDog(id, isFavorite)
       .then((response) => {
@@ -50,8 +49,7 @@ export const DogsProvider = ({ children }: { children: ReactNode }) => {
           setDogs(dogs);
           toast.error("Something went wrong. Please try again later.");
         } else return;
-      })
-      .finally(() => setIsLoading(false));
+      });
   };
 
   const deleteDog = (id: number) => {

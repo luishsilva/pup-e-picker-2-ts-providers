@@ -4,36 +4,8 @@
       "name": "Ramiro",
       "image": "/assets/boxer.png",
       "description": "Specialist cyan Rock Honda parsing Electric brand calculating",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 0
-    },
-    {
-      "name": "Rosendo",
-      "image": "/assets/chihuahua.avif",
-      "description": "newton ASCII compressing Infrastructure Movies alarm Southeast grotesque",
-      "isFavorite": true,
-      "id": 6
-    },
-    {
-      "name": "Marquise",
-      "image": "/assets/boxer.png",
-      "description": "Southwest Liberian grey Latin port",
-      "isFavorite": true,
-      "id": 13
-    },
-    {
-      "name": "Jordon",
-      "image": "/assets/corgi.png",
-      "description": "since Account ADP worrisome productize purple Jazz",
-      "isFavorite": false,
-      "id": 14
-    },
-    {
-      "name": "Kamille",
-      "image": "/assets/blue-heeler.png",
-      "description": "auxiliary Alaska Research Response withdrawal Convertible PCI",
-      "isFavorite": false,
-      "id": 15
     },
     {
       "name": "Ansley",
