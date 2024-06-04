@@ -2,7 +2,6 @@
 // Todo: Refactor to get rid of props (THERE SHOULD BE NO PROPS DRILLING ON THIS COMPONENT)
 import { DogCard } from "./DogCard";
 import { useDogs } from "../providers/DogsProvider";
-import { toast } from "react-hot-toast";
 
 export const Dogs = () => {
   const { activeTab, deleteDog, dogs, updateDog, isLoading, favoritedDogs, unFavoritedDogs } = useDogs();
